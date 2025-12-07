@@ -7,6 +7,7 @@ import java.io.PrintStream;
 
 import main.java.ListaCompraMain;
 
+/** Clase de Test para realizar las pruebas unitarias con JUnit. */
 public class ListaCompraTest {
 
 	//Sesiones de test para cada método
