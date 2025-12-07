@@ -1,4 +1,4 @@
-package listacompramain;
+package main.java;
 
 import java.util.*;
 
