@@ -20,7 +20,7 @@ public class ListaCompraMain {
 		System.out.println("=== Lista de la Compra ===");
 
 		//Menú de opciones
-		int opcion;
+		int opcion = 0;
 		do {
 			System.out.println("1. Añadir producto");
 			System.out.println("2. Eliminar producto");
@@ -28,9 +28,17 @@ public class ListaCompraMain {
 			System.out.println("4. Mostrar lista completa");
 			System.out.println("5. Vaciar lista");
 			System.out.println("6. Salir");
-			System.out.print("Elige una opción: ");
+			System.out.print("Elija una opción: ");
 
-			opcion = Integer.parseInt(scan.nextLine()); 
+			//Depuración
+			try {
+				opcion = Integer.parseInt(scan.nextLine());
+				while (opcion < 1 || opcion > 6) {
+					System.out.println("Introduzca una opción válida, entre 1 y 6 ");
+				}
+			}catch(NumberFormatException e) {
+				System.err.println("Error. Introduzca una opción correcta ");
+			}
 
 			switch (opcion) {
 			case 1:
