@@ -4,6 +4,13 @@ import java.util.*;
 
 //Desarrollo de aplicación de gestión de lista de la compra. Por Antonio Duarte
 
+/* Contribución de Sergio Pérez: Quitar las ñ a los métodos de añadir por si acaso. 
+Añadir un método opcional para mostrar la lista vacía */
+
+/*Contribución de Antonio: Integrar la nueva función propuesta por Sergio
+  para mostrar la lista vacía, pero manteniendo las ñ. */
+
+
 /** Clase Main que contiene el código para la aplicación de la lista de la compra. */
 public class ListaCompraMain {
 
@@ -172,15 +179,19 @@ public class ListaCompraMain {
 		numProductos = 0; // Resetear el contador
 	}
 
-	
-	
-	
-	//Método opcional para vaciar lista. Por Antonio Duarte
+	//Método para mostrar la lista vacía. Antonio Duarte y Sergio Pérez
 	public static void listaVacia() {
+
 		if (numProductos == 0) {
-			System.out.println("La lista está vacía.");
+			System.out.println("La lista está vacía. ");
 			return;
 		}
 
+		System.out.println("--- Lista de productos --- ");
+		for (int i = 0; i < numProductos; i++) {
+			System.out.println((i + 1) + ". " + lista[i]);
+		}
+	}
+
 }
-}
+
