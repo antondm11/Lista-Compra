@@ -172,6 +172,15 @@ public class ListaCompraMain {
 		numProductos = 0; // Resetear el contador
 	}
 
+	
+	
+	
+	//Método opcional para vaciar lista. Por Antonio Duarte
+	public static void listaVacia() {
+		if (numProductos == 0) {
+			System.out.println("La lista está vacía.");
+			return;
+		}
 
-
+}
 }
