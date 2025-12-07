@@ -7,10 +7,10 @@ import java.util.*;
 public class ListaCompraMain {
 
 	// Array de String para productos. Static para ser accesible en todas las funciones
-	static String[] lista = new String[50];
+	public static String[] lista = new String[50];
 
 	// Contador de productos. Static para que sea accesible en todas las funciones
-	static int numProductos = 0;
+	public static int numProductos = 0;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -97,7 +97,7 @@ public class ListaCompraMain {
 	//Funciones para cada opción
 
 	//Función para añadir producto
-	static boolean añadirProducto(String producto) {
+	public static boolean añadirProducto(String producto) {
 		if (numProductos >= 50) return false; //Caso de lista llena
 
 		//Evitar que se duplique un mismo producto
@@ -108,7 +108,7 @@ public class ListaCompraMain {
 		return true;
 	}
 	//Función para eliminar producto
-	static boolean eliminarProducto(String producto) {
+	public static boolean eliminarProducto(String producto) {
 		int pos = buscarProducto(producto);
 		if (pos == -1) return false;
 
@@ -120,7 +120,7 @@ public class ListaCompraMain {
 		return true;
 	}
 	//Función para buscar producto
-	static int buscarProducto(String producto) {
+	public static int buscarProducto(String producto) {
 		for (int i = 0; i < numProductos; i++) {
 			if (lista[i].equalsIgnoreCase(producto)) {
 				return i;
@@ -129,7 +129,7 @@ public class ListaCompraMain {
 		return -1;
 	}
 	//Función para mostrar la lista
-	static String[] mostrarLista() {
+	public static String[] mostrarLista() {
 		String[] mostrada = new String[numProductos];
 		for (int i = 0; i < numProductos; i++) {
 			mostrada[i] = lista[i];
@@ -137,7 +137,7 @@ public class ListaCompraMain {
 		return mostrada;
 	}
 	//Función para vaciar la lista
-	static void vaciarLista() {
+	public static void vaciarLista() {
 		numProductos = 0; // Resetear el contador
 	}
 
